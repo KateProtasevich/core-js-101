@@ -32,7 +32,8 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-  throw new Error('Not implemented');
+  const pattern = '[0-9abcdef]';
+  return new RegExp(`{${pattern}{8}-${pattern}{4}-${pattern}{4}-${pattern}{4}-${pattern}{12}}`, 'i');
 }
 
 
@@ -54,7 +55,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  throw new Error('Not implemented');
+  return /^pi|[a-z]p/;
 }
 
 
